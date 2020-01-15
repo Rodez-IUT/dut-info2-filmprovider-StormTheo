@@ -21,7 +21,7 @@
            </text>
         </resume>
     </film>
-    <film id_film="film_02" id_realisateur="real_02" annee="2003">
+    <film id_film="film_02" id_realisateur="real_02" annee="2003>
         <titre>Kill Bill</titre>
         <resume>
             <image source="killbill.jpg"/>
