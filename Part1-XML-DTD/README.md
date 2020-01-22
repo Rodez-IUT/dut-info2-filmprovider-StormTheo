@@ -55,7 +55,7 @@ La description est semblable à l'en-tête, texte et balises HTML mêlés.
 Le prix contient, outre la valeur d'achat du livre, l'indication de la devise (euro ou livre ou dollar, euro par défaut) 
 et du type (HT ou TTC, HT par défaut). On souhaite qu'un attribut 'tva' soit automatiquement fixé à la valeur constante "5.5".  
 Les contenus répétés sont fournis sous forme d'entités paramètres. Il s'agit des nom / prénom d'un auteur ou d'un directeur 
-de collectif, et du texte mêlé de balises HTML de l'en-tête et de la description.  
+de collectif, et du texte mêlé de balises HTML de l'en-tête et de la description.
 On souhaite pour finir disposer d'une entité permettant d'insérer le texte suivant dans l'en-tête : « ©Librairie & Internet 2020 ».
 
 1. Écrire la DTD Librairie.dtd correspondant à la spécification.
