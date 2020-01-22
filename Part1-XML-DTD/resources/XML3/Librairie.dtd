@@ -27,8 +27,8 @@
 
 <!ELEMENT prix (texte, devise)>
 <!ELEMENT devise EMPTY>
-<!ATTLIST devise monnaie ("euro_monnaie" | "livre_monnaie" | "dollar_monnaie") "euro_monnaie">
-<!ATTLIST devise precision ("HT" | "TTC") "HT">
+<!ATTLIST devise monnaie ("euro_monnaie" | "livre_monnaie" | "dollar_monnaie") "euro_monnaie" #REQUIRED>
+<!ATTLIST devise precision ("HT" | "TTC") "HT" #REQUIRED>
 <!ATTLIST devise tva #FIXED "5.5">
 
 <!ELEMENT parametres (auteur | collectif, entete, description)>
