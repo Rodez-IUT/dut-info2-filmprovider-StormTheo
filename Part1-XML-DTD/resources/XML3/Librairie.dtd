@@ -1,0 +1,21 @@
+<!ELEMENT librairie (entete, livre+)>
+
+<!ELEMENT entete (balise)*>
+<!ELEMENT balise (strong | em | img)*>
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT img (#PCDATA)>
+<!ATTLIST img   src     CDATA   #REQUIRED
+                title   CDATA   #IMPLIED>
+
+<!ELEMENT livre (titre, auteurs+, description, prix)>
+<!ATTLIST livre numISBN ID #REQUIRED>
+
+<!ELEMENT image EMPTY>
+<!ATTLIST image source CDATA #REQUIRED>
+<!ELEMENT text (#PCDATA)>
+
+<!ELEMENT auteur (nom, prenom?)>
+<!ATTLIST auteur id_auteur ID #REQUIRED>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
