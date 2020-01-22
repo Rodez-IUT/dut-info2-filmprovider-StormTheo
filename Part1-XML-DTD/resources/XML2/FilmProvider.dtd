@@ -14,4 +14,4 @@
 <!ELEMENT realisateur (prenom, nom)>
 <!ATTLIST realisateur id_realisateur ID #REQUIRED>
 <!ELEMENT prenom (#PCDATA)>
-<!ELEMENT nom (#PCDATA)
+<!ELEMENT nom (#PCDATA)>
