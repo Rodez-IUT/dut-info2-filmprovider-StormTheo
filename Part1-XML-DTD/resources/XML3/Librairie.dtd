@@ -1,21 +1,18 @@
 <!ELEMENT librairie (entete, livre+)>
 
-<!ELEMENT entete (texte | balise)*>
+<!ELEMENT entete (texte | (strong | em | img)*)*>
 <!ELEMENT texte (#PCDATA)>
-<!ELEMENT balise (strong | em | img)*>
 <!ELEMENT strong (#PCDATA)>
 <!ELEMENT em (#PCDATA)>
 <!ELEMENT img (#PCDATA)>
 <!ATTLIST img   src     CDATA   #REQUIRED
                 title   CDATA   #IMPLIED>
 
-<!ELEMENT livre (titre, auteur+ | collectif , description, prix)>
-<!ATTLIST livre numISBN     ID      #REQUIRED
-                id_auteur   IDREF   #REQUIRED>
+<!ELEMENT livre (titre, (auteur+ | collectif) , description, prix)>
+<!ATTLIST livre isbn        ID      #REQUIRED>
 <!ELEMENT titre (#PCDATA)>
 
 <!ELEMENT auteur (nom, prenom?)>
-<!ATTLIST auteur id_auteur ID #REQUIRED>
 <!ELEMENT prenom (#PCDATA)>
 <!ELEMENT nom (#PCDATA)>
 
@@ -23,13 +20,12 @@
 <!ELEMENT direction (nom?, prenom?)>
 <!ELEMENT membres (#PCDATA)>
 
-<!ELEMENT description (texte | balise)*>
+<!ELEMENT description (texte | (strong | em | img)*)*>
 
-<!ELEMENT prix (texte, devise)>
-<!ELEMENT devise EMPTY>
-<!ATTLIST devise monnaie ("euro_monnaie" | "livre_monnaie" | "dollar_monnaie") "euro_monnaie" #REQUIRED>
-<!ATTLIST devise precision ("HT" | "TTC") "HT" #REQUIRED>
-<!ATTLIST devise tva #FIXED "5.5">
+<!ELEMENT prix (texte)>
+<!ATTLIST prix devise ("euro" | "livre" | "dollar") "euro" #REQUIRED>
+<!ATTLIST prix type ("HT" | "TTC") "HT" #REQUIRED>
+<!ATTLIST prix tva #FIXED "5.5">
 
 <!ELEMENT parametres (auteur | collectif, entete, description)>
 
