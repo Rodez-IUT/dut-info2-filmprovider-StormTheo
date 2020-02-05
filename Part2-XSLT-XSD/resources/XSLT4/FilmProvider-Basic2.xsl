@@ -12,6 +12,7 @@
                     <thead>
                         <tr>
                             <th>Titre</th>
+                            <th>Auteur</th>
                             <th>Résumé</th>
                         </tr>
                     </thead>
@@ -26,7 +27,12 @@
     <xsl:template match="film">
         <tr>
             <td><xsl:value-of select="titre"/></td>
-            <td><xsl:value-of select="titre[@id_auteur='']"/></td>
+            <xsl:variable name="id_rea" select="@id_realisateur"/>
+            <td>
+                <xsl:value-of select="//realisateur[@id_realisateur=$id_rea]/prenom"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="//realisateur[@id_realisateur=$id_rea]/nom"/>
+            </td>
             <td><xsl:value-of select="resume/text"/></td>
         </tr>
     </xsl:template>
