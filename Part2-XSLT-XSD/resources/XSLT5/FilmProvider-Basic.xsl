@@ -7,7 +7,7 @@
                 <title>Films</title>
             </head>
             <body>
-                <h1>Films</h1>
+                <h1>Liste des films</h1>
                 <table>
                     <thead>
                         <tr>
@@ -28,6 +28,7 @@
         <tr>
             <td><xsl:value-of select="titre"/></td>
             <xsl:variable name="id_rea" select="@id_realisateur"/>
+            <td><xsl:if test="image"><xsl:value-of select="titre"/></xsl:if></td>
             <td>
                 <xsl:value-of select="//realisateur[@id_realisateur=$id_rea]/prenom"/>
                 <xsl:text> </xsl:text>
