@@ -20,9 +20,7 @@
         <table width="60%">
             <tr>
                 <td colspan="2">
-                    <b>
-                        <xsl:value-of select="titre"/>
-                    </b>
+                    <b><xsl:value-of select="titre"/></b>
                     <i> (<xsl:value-of select="$realisateur/prenom"/>, <xsl:value-of select="$realisateur/nom"/>)</i>
                 </td>
             </tr>
