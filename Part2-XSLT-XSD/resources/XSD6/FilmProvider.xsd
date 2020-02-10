@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="realisateur">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="prenom" type="xs:string"/>
-                <xs:element name="nom" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
 
+  <xs:element name="films" type="filmsType"/>
+
+  <xs:complexType name="realisateurType" >
+    <xs:sequence>
+      <xs:element name="prenom"/>
+      <xs:element name="nom"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id_realisateur" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="resumeType">
+    <xs:sequence>
+      <xs:element type="imageType" name="image" minOccurs="0" maxOccurs="1"/>
+      <xs:element type="xs:string" name="text"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="filmType">
+    <xs:sequence>
+      <xs:element name="titre"/>
+      <xs:element type="resumeType" name="resume"/>
+    </xs:sequence>
+
+    <xs:attribute type="xs:string" name="id_film" use="required"/>
+    <xs:attribute type="xs:string" name="id_realisateur" use="required"/>
+    <xs:attribute type="xs:string" name="annee" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="imageType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="source" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="filmsType">
+    <xs:sequence>
+      <xs:element type="realisateurType" name="realisateur" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="filmType" name="film" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
 
 </xs:schema>
