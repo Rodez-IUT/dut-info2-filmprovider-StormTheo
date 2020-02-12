@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<films  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="FilmProvider.xsd">
+<tBOUCHOUIEFF:films  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://formationxml/filmprovider FilmProvider.xsd"
+        xmlns:tBOUCHOUIEFF="http://formationxml/filmprovider">
+    
     <realisateur id_realisateur="real_01">
         <prenom>Martin</prenom>
         <nom>Scorsese</nom>
@@ -39,4 +41,4 @@
             <text>Inspiré d'un fait réel : histoire de mafia italienne.</text>
         </resume>
     </film>
-</films>
+</tBOUCHOUIEFF:films>

@@ -71,7 +71,7 @@ en vous aidant des fonctionnalités fournies par votre éditeur XML.
 
 1. Reprendre le schéma FilmProvider.xsd pour qu'il intègre les contraintes suivantes :
 
-- les éléments définis dans le schéma doivent être lié à l'espace de nom « http://formationxml/filmprovider »
+- les éléments définis dans le schéma doivent être liés à l'espace de nom « http://formationxml/filmprovider »
 - les attributs id_realisateur des éléments realisateur et film doivent être déclarés respectivement comme key et keyref
 - les id_realisateur et id_film doivent être conformes à des patterns adaptés (real_<num>, film_<num>)
 - l’année de sortie d’un film doit être comprise entre 1920 et 2006.
@@ -79,5 +79,4 @@ en vous aidant des fonctionnalités fournies par votre éditeur XML.
 2. Créer un nouveau document XML en indiquant qu’il doit être conforme au XML Schema écrit précédemment. 
 Remplir le document en vous aidant des fonctionnalités fournies par votre éditeur XML.
  
- > fix #2.7 Schema XML amélioré
-
+> fix #2.7 Schema XML amélioré
