@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<films>
+<films  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="FilmProvider.xsd">
     <realisateur id_realisateur="real_01">
         <prenom>Martin</prenom>
         <nom>Scorsese</nom>
