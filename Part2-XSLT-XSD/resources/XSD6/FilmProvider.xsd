@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  http://formationxml/filmprovider
+  <!-- à inclure pour l'espace de nom, voir diapos, à la fin -->
+  <!-- http://formationxml/filmprovider -->
 
   <xs:element name="films" type="filmsType"/>
 
